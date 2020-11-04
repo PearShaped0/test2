@@ -11,7 +11,7 @@ void test(){
                       "Which comics character is closer to you?\n a)Iron Man\n b)Spiderman\n c)Joker"
     };
     char c;
-    for(int i = 0; i < sizeof(answers); i++){
+    for(int i; i < sizeof(answers); i++){
         cout << quest[i] << endl;
         scanf("%s", &c);
         answers[i] = c;
@@ -21,9 +21,9 @@ void test(){
 
 void result(string name){
     char a = 'a', b = 'b', c = 'c';
-    int co_a, co_b, co_c;
+    int co_a = 0, co_b = 0, co_c = 0;
     
-    for (int i = 0; i < sizeof(answers); i++){
+    for (int i; i < sizeof(answers); i++){
         if (answers[i] == a){
             co_a++;
         }else if (answers[i] == b){
